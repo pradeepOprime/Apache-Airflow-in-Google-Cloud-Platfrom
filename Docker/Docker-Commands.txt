@@ -1,0 +1,40 @@
+
+
+Install Docker:
+===========
+
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+sudo usermod -aG docker <your-user-name>
+
+#Remember to log out and back in for this to take effect!
+
+docker --version
+
+
+Build Docker Image:
+===============
+
+docker image build -t gvelrajan/hello-world:v1.0 .
+
+docker image ls
+
+
+Docker Hub:
+=========
+
+docker login
+
+docker push gvelrajan/hello-world:v1.0
+
+
+Run the Docker Container:
+=====================
+
+docker run -d -p 80:80 gvelrajan/hello-world:v1.0 
+
+
+
+
+
